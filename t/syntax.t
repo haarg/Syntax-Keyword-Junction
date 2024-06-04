@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Test::More;
-use Test::Requires {
+use Test::Needs {
    'Sub::Exporter' => 0.986,
 };
 

@@ -1,6 +1,6 @@
 use strict;
 use Test::More;
-use Test::Requires {
+use Test::Needs {
    'Sub::Exporter' => 0.986,
 };
 no if $] > 5.017010, warnings => 'experimental::smartmatch';
