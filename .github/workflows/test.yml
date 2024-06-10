@@ -61,7 +61,7 @@ jobs:
 
     runs-on: ubuntu-latest
     container:
-      image: perldocker/perl-tester:${{ matrix.perl-version }}
+      image: perl:${{ matrix.perl-version }}
 
     env:
       AUTHOR_TESTING: 1
