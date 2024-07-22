@@ -8,7 +8,7 @@ use warnings;
 use parent 'Syntax::Keyword::Junction::Base';
 
 BEGIN {
-  if ($] >= 5.010001 && $] < 5.042000) {
+  if ($] >= 5.010001 && $] < 5.041000) {
     ## no critic
     eval q|
 sub match {
