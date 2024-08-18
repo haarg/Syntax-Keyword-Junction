@@ -1,9 +1,8 @@
 package Syntax::Keyword::Junction::None;
-
 use strict;
 use warnings;
 
-# VERSION
+our $VERSION = '0.003008';
 
 use parent 'Syntax::Keyword::Junction::Base';
 
@@ -205,4 +204,3 @@ sub bool {
 }
 
 1;
-

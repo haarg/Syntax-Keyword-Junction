@@ -1,9 +1,8 @@
 package Syntax::Keyword::Junction::Base;
-
 use strict;
 use warnings;
 
-# VERSION
+our $VERSION = '0.003008';
 
 use overload(
     '=='   => "num_eq",
@@ -38,4 +37,3 @@ sub map {
 }
 
 1;
-

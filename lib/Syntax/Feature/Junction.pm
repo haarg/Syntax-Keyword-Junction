@@ -3,9 +3,7 @@ package Syntax::Feature::Junction;
 use strict;
 use warnings;
 
-# VERSION
-
-# ABSTRACT: Provide keywords for any, all, none, or one
+our $VERSION = '0.003008';
 
 require Syntax::Keyword::Junction;
 
@@ -21,6 +19,11 @@ sub install {
 }
 
 1;
+__END__
+
+=head1 NAME
+
+Syntax::Feature::Junction - Provide keywords for any, all, none, or one
 
 =head1 SYNOPSIS
 
@@ -64,4 +67,3 @@ The full documentation for this module is in L<Syntax::Keyword::Junction>.  This
 is just a way to use the sugar that L<syntax> gives us.
 
 =cut
-

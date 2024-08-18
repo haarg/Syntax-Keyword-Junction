@@ -1,12 +1,9 @@
 package Syntax::Keyword::Junction;
-
 use strict;
 use warnings;
 use 5.006;
 
-# VERSION
-
-# ABSTRACT: Perl6 style Junction operators in Perl5
+our $VERSION = '0.003008';
 
 require Syntax::Keyword::Junction::All;
 require Syntax::Keyword::Junction::Any;
@@ -28,8 +25,11 @@ sub none { Syntax::Keyword::Junction::None->new(@_) }
 sub one  { Syntax::Keyword::Junction::One->new(@_)  }
 
 1;
-
 __END__
+
+=head1 NAME
+
+Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 =head1 SYNOPSIS
 

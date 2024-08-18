@@ -1,3 +1,4 @@
 *.swp
 /cover_db/
 /Syntax-Keyword-Junction-*
+/.build/
