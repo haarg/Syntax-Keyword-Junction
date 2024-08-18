@@ -61,7 +61,7 @@ jobs:
 
     runs-on: ubuntu-latest
     container:
-      image: perl:${{ matrix.perl-version }}
+      image: perl:${{ matrix.perl-version }}-buster
 
     env:
       AUTHOR_TESTING: 1
