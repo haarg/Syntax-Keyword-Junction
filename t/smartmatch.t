@@ -14,7 +14,7 @@ no if $] >= 5.038000, warnings => 'deprecated::smartmatch';
 
 plan tests => 16;
 
-use syntax 'junction';
+use Syntax::Keyword::Junction;
 
 my $is_1 = sub { $_[0] == 1 };
 my $is_2 = sub { $_[0] == 2 };

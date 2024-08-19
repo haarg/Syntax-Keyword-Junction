@@ -4,6 +4,7 @@ use warnings;
 use Test::More;
 use Test::Needs {
   'Sub::Exporter' => 0.986,
+  'syntax'        => 0,
 };
 
 use syntax junction => {
