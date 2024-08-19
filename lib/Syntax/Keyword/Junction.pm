@@ -29,7 +29,7 @@ __END__
 
 =head1 NAME
 
-Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
+Syntax::Keyword::Junction - Comparisons against multiple values
 
 =head1 SYNOPSIS
 
