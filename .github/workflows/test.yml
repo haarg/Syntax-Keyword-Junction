@@ -79,6 +79,9 @@ jobs:
           echo "PERL5LIB=$RUNNER_TEMP/perl5/lib/perl5:$PERL5LIB" >> "$GITHUB_ENV"
           echo "PERL_MB_OPT=--install_base $RUNNER_TEMP/perl5" >> "$GITHUB_ENV"
           echo "PERL_MM_OPT=INSTALL_BASE=$RUNNER_TEMP/perl5" >> "$GITHUB_ENV"
+      - name: Install old dependencies
+        if: ${{ matrix.perl-version }} == '5.8' || ${{ matrix.perl-version }} == '5.10'
+        run: cpanm --notest Data::OptList~'<= 0.113'
       - name: Install dependencies
         run: cpanm --installdeps . --with-develop --with-recommends --with-suggests --notest
       - name: Run Makefile.PL
