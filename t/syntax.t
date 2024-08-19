@@ -3,11 +3,11 @@ use warnings;
 
 use Test::More;
 use Test::Needs {
-   'Sub::Exporter' => 0.986,
+  'Sub::Exporter' => 0.986,
 };
 
 use syntax junction => {
-   -all => { -prefix => 'syntax_' }
+  -all => { -prefix => 'syntax_' }
 };
 
 use Syntax::Keyword::Junction -all => { -prefix => 'orig_' };

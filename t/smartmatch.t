@@ -5,9 +5,9 @@ use Test::Needs {
    'Sub::Exporter' => 0.986,
 };
 BEGIN {
-    unless ($] >= 5.010001 && $] < 5.041000) {
-        plan skip_all => "~~ support requires Perl version >= 5.10.1 and < 5.41.0";
-    }
+  unless ($] >= 5.010001 && $] < 5.041000) {
+    plan skip_all => "~~ support requires Perl version >= 5.10.1 and < 5.41.0";
+  }
 }
 no if $] > 5.017010, warnings => 'experimental::smartmatch';
 no if $] >= 5.038000, warnings => 'deprecated::smartmatch';

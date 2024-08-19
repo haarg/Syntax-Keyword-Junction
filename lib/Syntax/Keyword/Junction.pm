@@ -11,12 +11,12 @@ require Syntax::Keyword::Junction::None;
 require Syntax::Keyword::Junction::One;
 
 use Sub::Exporter::Progressive -setup => {
-   exports => [qw( all any none one )],
-   groups => {
-      default => [qw( all any none one )],
-      # for the switch from Exporter
-      ALL     => [qw( all any none one )],
-   },
+  exports => [qw( all any none one )],
+  groups => {
+    default => [qw( all any none one )],
+    # for the switch from Exporter
+    ALL     => [qw( all any none one )],
+  },
 };
 
 sub all  { Syntax::Keyword::Junction::All->new(@_)  }
@@ -134,18 +134,18 @@ the operator used.
 You cannot alter junctions.  Instead, you can create new junctions out of old
 junctions.  You can do this by calling the C<values> method on a junction.
 
- my $numbers = any(qw/1 2 3 4 5/);
- print $numbers == 3 ? 'Yes' : 'No';   # Yes
+  my $numbers = any(qw/1 2 3 4 5/);
+  print $numbers == 3 ? 'Yes' : 'No';   # Yes
 
- $numbers = any( grep { $_ != 3 } $numbers->values );
- print $numbers == 3 ? 'Yes' : 'No';   # No
+  $numbers = any( grep { $_ != 3 } $numbers->values );
+  print $numbers == 3 ? 'Yes' : 'No';   # No
 
 You can also use the C<map> method:
 
- my $numbers = any(qw/1 2 3 4 5/);
- my $prime   = $numbers->map( \&is_prime );
+  my $numbers = any(qw/1 2 3 4 5/);
+  my $prime   = $numbers->map( \&is_prime );
 
- say for $prime->values; # prints 0, 1, 1, 0, 1
+  say for $prime->values; # prints 0, 1, 1, 0, 1
 
 =head1 EXPORT
 
