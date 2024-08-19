@@ -73,7 +73,7 @@ This is a lightweight module which provides 'Junction' operators, the most
 commonly used being C<any> and C<all>.
 
 Inspired by the Perl6 design docs,
-L<http://dev.perl.org/perl6/doc/design/exe/E06.html>.
+L<https://web.archive.org/web/20230922160729/https://raku.org/archive/doc/design/exe/E06.html#The%20Wonderful%20World%20of%20Junctions>.
 
 Provides a limited subset of the functionality of L<Quantum::Superpositions>,
 see L</"SEE ALSO"> for comment.
@@ -185,8 +185,7 @@ more. However, this module provides this limited functionality at a much
 greater runtime speed, with my benchmarks showing between 500% and 6000%
 improvement.
 
-L<http://dev.perl.org/perl6/doc/design/exe/E06.html> - "The Wonderful World
-of Junctions".
+L<https://web.archive.org/web/20230922160729/https://raku.org/archive/doc/design/exe/E06.html#The%20Wonderful%20World%20of%20Junctions> - "The Wonderful World of Junctions".
 
 =cut
 
