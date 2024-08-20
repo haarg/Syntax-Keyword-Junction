@@ -1,6 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - fixed smart match warnings on perls 5.38 or greater
+  - stop enabling smart match support on perl 5.41 or greater
+  - many packaging cleanups
+  - removed direct dependency on syntax.pm
 
 0.003008  2014-07-06 20:08:35-05:00 America/Chicago
   - Stop using base.pm (Olivier Mengué)
