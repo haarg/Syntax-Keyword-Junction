@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use 5.006;
 
-our $VERSION = '0.003009';
+our $VERSION = '0.003010';
 
 require Syntax::Keyword::Junction::All;
 require Syntax::Keyword::Junction::Any;

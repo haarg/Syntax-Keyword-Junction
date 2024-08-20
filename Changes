@@ -1,4 +1,6 @@
-Revision history for Syntax-Keyword-Junction
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
 
 0.003009  2024-08-20
   - fixed smart match warnings on perls 5.38 or greater

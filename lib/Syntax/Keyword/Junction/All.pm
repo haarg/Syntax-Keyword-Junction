@@ -2,7 +2,7 @@ package Syntax::Keyword::Junction::All;
 use strict;
 use warnings;
 
-our $VERSION = '0.003009';
+our $VERSION = '0.003010';
 
 use parent 'Syntax::Keyword::Junction::Base';
 
