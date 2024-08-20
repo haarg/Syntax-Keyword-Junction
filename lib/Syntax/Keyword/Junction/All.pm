@@ -7,13 +7,13 @@ our $VERSION = '0.003008';
 use parent 'Syntax::Keyword::Junction::Base';
 
 BEGIN {
-  if ($] >= 5.010001 && $] < 5.041000) {
-    ## no critic
-    eval q|
+  if (Syntax::Keyword::Junction::Base::_WANT_SMARTMATCH) {
+    eval '#line '.(__LINE__+1).' "' . __FILE__.qq["\n] . <<'END_CODE' or die $@;
+no if Syntax::Keyword::Junction::Base::_SMARTMATCH_WARNING_CATEGORY,
+  warnings => Syntax::Keyword::Junction::Base::_SMARTMATCH_WARNING_CATEGORY;
+
 sub match {
     my ( $self, $other, $is_rhs ) = @_;
-    no if $] > 5.017010, warnings => 'experimental::smartmatch';
-    no if $] >= 5.038000, warnings => 'deprecated::smartmatch';
 
     if ($is_rhs) {
         for (@$self) {
@@ -29,7 +29,9 @@ sub match {
 
     return 1;
 }
-|
+
+1;
+END_CODE
   }
 }
 

@@ -4,6 +4,16 @@ use warnings;
 
 our $VERSION = '0.003008';
 
+BEGIN {
+  *_WANT_SMARTMATCH = ("$]" >= 5.010001 && "$]" < 5.041000) ? sub(){1} : sub(){0};
+  my $category
+    = "$]" >= 5.041000 ? undef
+    : "$]" >= 5.037011 ? 'deprecated::smartmatch'
+    : "$]" >= 5.017011 ? 'experimental::smartmatch'
+    : undef;
+  *_SMARTMATCH_WARNING_CATEGORY = sub(){$category};
+}
+
 use overload(
     '=='   => "num_eq",
     '!='   => "num_ne",
@@ -19,7 +29,7 @@ use overload(
     'lt'   => "str_lt",
     'bool' => "bool",
     '""'   => sub {shift},
-    ('~~' => 'match') x!! ($] >= 5.010001 && $] < 5.041000),
+    ('~~' => 'match') x!! _WANT_SMARTMATCH,
 );
 
 
