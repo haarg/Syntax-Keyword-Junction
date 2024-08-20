@@ -2,7 +2,7 @@ package Syntax::Keyword::Junction::Base;
 use strict;
 use warnings;
 
-our $VERSION = '0.003008';
+our $VERSION = '0.003009';
 
 BEGIN {
   *_WANT_SMARTMATCH = ("$]" >= 5.010001 && "$]" < 5.041000) ? sub(){1} : sub(){0};
