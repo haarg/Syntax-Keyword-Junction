@@ -72,7 +72,7 @@ or if you want to rename an export, use L<Sub::Exporter> options:
 This is a lightweight module which provides 'Junction' operators, the most
 commonly used being C<any> and C<all>.
 
-Inspired by the Perl6 design docs,
+Inspired by the Perl 6 design docs,
 L<https://web.archive.org/web/20230922160729/https://raku.org/archive/doc/design/exe/E06.html#The%20Wonderful%20World%20of%20Junctions>.
 
 Provides a limited subset of the functionality of L<Quantum::Superpositions>,
@@ -178,7 +178,7 @@ Add overloading for arithmetic operators, such that this works:
 
 This module is actually a fork of L<Perl6::Junction> with very few
 (initial) changes.  The reason being that we want to avoid the
-incendiary name containing Perl6.
+incendiary name containing Perl 6.
 
 L<Quantum::Superpositions> provides the same functionality as this, and
 more. However, this module provides this limited functionality at a much
