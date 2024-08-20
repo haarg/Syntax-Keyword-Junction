@@ -83,7 +83,7 @@ jobs:
         if: ${{ matrix.perl-version }} == '5.8' || ${{ matrix.perl-version }} == '5.10'
         run: cpanm --notest Data::OptList~'<= 0.113'
       - name: Install dependencies
-        run: cpanm --installdeps . --with-recommends --with-suggests --notest
+        run: cpanm --showdeps . --with-recommends --with-suggests -q | cpanm --notest
       - name: Run Makefile.PL
         run: perl Makefile.PL
       - name: Run the tests
@@ -114,6 +114,6 @@ jobs:
           echo "PERL_MB_OPT=--install_base $RUNNER_TEMP/perl5" >> "$GITHUB_ENV"
           echo "PERL_MM_OPT=INSTALL_BASE=$RUNNER_TEMP/perl5" >> "$GITHUB_ENV"
       - name: Install dependencies
-        run: cpanm --installdeps . --with-develop --with-recommends --with-suggests --notest
+        run: cpanm --showdeps . --with-develop --with-recommends --with-suggests -q | cpanm --notest
       - name: Run the xt tests
         run: prove -lr xt
